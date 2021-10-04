@@ -1,4 +1,4 @@
-// 27.9.2021
+// 4.10.2021
 import java.util.Scanner;
 import java.lang.Math;
 public class Arithmetic_enCoding{
@@ -90,12 +90,15 @@ public class Arithmetic_enCoding{
 			if(k!=1) code*=10;
 			
 			code++;
-			if(value(code,k)>H){
+			//System.out.println(code+"  "+value(code,k)+" "+(value(code,k)>H));
+			if(value(code,k)>=H){
 				code--;
 			}			
 			//System.out.println(code+"  "+value(code,k)+" "+(value(code,k)<L));
 		}
-		System.out.println("code is : "+code+"\n");
+		System.out.println(L+"<= "+value(code,k)+" < "+H+"\n");
+		String padded = String.format("%0"+k+"d" , code);
+		System.out.println("code is : "+padded+"\n");
 
 	}
 	public static float value(int code,int k){
